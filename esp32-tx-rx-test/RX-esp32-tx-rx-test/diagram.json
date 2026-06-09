@@ -1,0 +1,187 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led4",
+      "top": -32.4,
+      "left": 109.4,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led5",
+      "top": -32.4,
+      "left": 138.2,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led6",
+      "top": -32.4,
+      "left": 167,
+      "attrs": {
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led7",
+      "top": -32.4,
+      "left": 195.8,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led8",
+      "top": -32.4,
+      "left": 224.6,
+      "attrs": {
+        "color": "white"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -64.8,
+      "left": -65.4,
+      "attrs": {
+        "volume": "0.1"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "led4:A",
+      "esp:23",
+      "orange",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led5:A",
+      "esp:22",
+      "orange",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led6:A",
+      "esp:21",
+      "orange",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led7:A",
+      "esp:19",
+      "orange",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led8:A",
+      "esp:18",
+      "orange",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "esp:GND.2",
+      "led4:C",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led5:C",
+      "esp:GND.2",
+      "black",
+      [
+        "h-9.2",
+        "v-48",
+        "h-43.24"
+      ]
+    ],
+    [
+      "led6:C",
+      "esp:GND.2",
+      "black",
+      [
+        "h-9.2",
+        "v-48",
+        "h-72.04"
+      ]
+    ],
+    [
+      "led7:C",
+      "esp:GND.2",
+      "black",
+      [
+        "h-9.2",
+        "v-48",
+        "h-100.84"
+      ]
+    ],
+    [
+      "led8:C",
+      "esp:GND.2",
+      "black",
+      [
+        "h-9.2",
+        "v-48",
+        "h-129.64"
+      ]
+    ],
+    [
+      "bz1:2",
+      "esp:25",
+      "orange",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "bz1:1",
+      "esp:GND.1",
+      "black",
+      [
+        "v0"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}
